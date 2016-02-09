@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   
-  resources :pins
-  devise_for :users
   root 'home#index' 
   get 'home/about', to: 'home#about'
+
+  resources :pins
+  devise_for :users
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

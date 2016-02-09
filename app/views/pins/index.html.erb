@@ -1,4 +1,6 @@
-<!--p id="notice"><#%= notice %></p-->
+
+
+<p id="notice"><%= notice %></p>
 
 <h1>Listing Pins</h1>
 
@@ -16,7 +18,7 @@
         <td><%= pin.description %></td>
         <td><%= link_to 'Show', pin %></td>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
