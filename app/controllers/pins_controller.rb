@@ -53,6 +53,7 @@ class PinsController < ApplicationController
 
   # DELETE /pins/1
   # DELETE /pins/1.json
+ 
   def destroy
     @pin.destroy
     respond_to do |format|
