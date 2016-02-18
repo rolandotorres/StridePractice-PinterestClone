@@ -1,9 +1,11 @@
 
 
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Pins</h1>
-
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1>Listing Pins</h1>
+  </div>
+<div class="panel-body">
 <table>
   <thead>
     <tr>
@@ -17,8 +19,10 @@
       <tr>
         <td><%= pin.description %></td>
         <td><%= link_to 'Show', pin, class: 'btn btn-primary' %>&nbsp;</td>
+        <% if pin.user == current_user %>
         <td><%= link_to 'Edit', edit_pin_path(pin),class: 'btn btn-info' %>&nbsp;</td>
         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -27,3 +31,4 @@
 <br>
 
 <%= link_to 'New Pin', new_pin_path, class: 'btn btn-success' %>
+</div>
