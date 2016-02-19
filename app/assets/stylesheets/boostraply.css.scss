@@ -1,7 +1,10 @@
 
-$navbar-default-bg:#08088A;
-
-
+$navbar-default-bg:#99994d;
+$white:#fff;
+$navbar-default-link-color:$white;
+$navbar-default-link-hover-color:$white;
+$navbar-default-link-hover-bg:#b2b266;
+$jumbotron-bg:#ccccff;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -21,4 +24,17 @@ $navbar-default-bg:#08088A;
 }
 .jumbotron h1 {
     color: #0033FF;
+}
+
+.btn {
+  color: #fff;
+
+  &:visited {
+    color: #fff;
+  }
+
+  /*&:hover {
+    color: #000;
+    background-color: #000;
+  }*/
 }
