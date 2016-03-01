@@ -17,8 +17,9 @@
   <tbody>
     <% @pins.each do |pin| %>
       <tr>
-        <td><%= pin.description %>&nbsp;</td>
-        <td><%= image_tag pin.image.url( :thumb) %>&nbsp;</td>
+        
+        <td><%= image_tag pin.image.url( :thumb) %>&nbsp;</td><br/>
+        <td><strong>Description:</strong><%= pin.description %>&nbsp;</td>
         <td><%= link_to 'Show', pin, class: 'btn btn-info' %>&nbsp;</td>
         <% if pin.user == current_user %>
         <td><%= link_to 'Edit', edit_pin_path(pin),class: 'btn btn-warning' %>&nbsp;</td>
