@@ -1,40 +1,24 @@
 
 
 <p id="notice"><%= notice %></p>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h1>Listing Pins</h1>
-  </div>
+
+
+  <div class="panel-heading"></div>
+   
 <div class="panel-body">
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pins.each do |pin| %>
-      <tr>
-        
-        <td><%= image_tag pin.image.url( :thumb) %>&nbsp;</td><br/>
-        <td><strong>Description:</strong><%= pin.description %>&nbsp;</td>
-        <td><%= link_to 'Show', pin, class: 'btn btn-info' %>&nbsp;</td>
+      <% @pins.each do |pin| %>
+        <%= image_tag pin.image.url( :thumb) %>
+        <strong>Description:</strong><%= pin.description %><br/>
+        <%= link_to 'Show', pin, class: 'btn btn-info' %>&nbsp;
         <% if pin.user == current_user %>
-        <td><%= link_to 'Edit', edit_pin_path(pin),class: 'btn btn-warning' %>&nbsp;</td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+        <%= link_to 'Edit', edit_pin_path(pin),class: 'btn btn-warning' %>&nbsp;
+        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
         <% end %>
-      </tr>
+        <br/>
     <% end %>
-  </tbody>
-</table>
-
-
-<br>
-  <% if user_signed_in? %>
-  <% javascript_include_tag :defaults %>
-  <%= link_to 'New Pin', new_pin_path, class: 'btn btn-success btn-lg' %>
-  <% end %>
-</div>
+    
+  <!--#% if user_signed_in? %>
+  <#% javascript_include_tag :defaults %>
+  <#%= link_to 'New Pin', new_pin_path, class: 'btn btn-success btn-lg' %>
+  <#% end %-->
 </div>
