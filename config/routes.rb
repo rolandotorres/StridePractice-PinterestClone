@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'home#index' 
+  root 'pins#index' 
   get 'home/about', to: 'home#about'
 
   resources :pins

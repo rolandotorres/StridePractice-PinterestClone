@@ -8,6 +8,10 @@ $jumbotron-bg:#ccccff;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.center{
+  text-align: center;
+  margin:0 auto;
+} 
 
 #logo {
     float: left;
@@ -42,4 +46,20 @@ $jumbotron-bg:#ccccff;
     color: #000;
     background-color: #000;
   }*/
+}
+.panel {
+  &-heading {
+    margin: 0;
+    padding: 10px;
+  }
+  &-body {
+    margin: 0;
+    padding: 5px;
+  }
+  &-footer {
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+    width: 100%;
+  }
 }

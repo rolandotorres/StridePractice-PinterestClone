@@ -2,20 +2,32 @@
 
 <p id="notice"><%= notice %></p>
 
+<div class="center">
+    <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+</div>
+<br/>
   <div id="pins">
   
       <% @pins.each do |pin| %>
-    <div class="box">
      
+    <div class="box">
+       <div class="panel panel-default">
+        <div class="panel-heading">
         <%= link_to image_tag(pin.image.url( :medium)), pin %><br/>
+        </div>
+      <div class="panel-body">
         <strong>Description: </strong><%= pin.description %><br/>
-        <strong>Upload by: </strong><%= pin.user.name if pin.user %>
+        <strong>Pinned by: </strong><%= pin.user.name if pin.user %>
+     
+        
         <% if pin.user == current_user %>
-        <br/>
+        <div class="panel-footer">
         <%= link_to 'Edit', edit_pin_path(pin),class: 'btn btn-warning btn-xs' %>&nbsp;
         <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %>
+        </div>
         <% end %>
-        <br/>
+         </div>
+       </div>
       </div>
     <% end %>
   </div>
@@ -23,4 +35,6 @@
   <#% javascript_include_tag :defaults %>
   <#%= link_to 'New Pin', new_pin_path, class: 'btn btn-success btn-lg' %>
   <#% end %-->
-
+<div class="center">
+    <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+</div>
