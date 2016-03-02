@@ -32,7 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise', '~> 3.5', '>= 3.5.6'
-gem 'coffee-script-source', '~> 1.10'
+#gem 'coffee-script-source', '~> 1.10'
 gem 'paperclip', '~> 4.3', '>= 4.3.5'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.20'
 
