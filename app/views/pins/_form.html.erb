@@ -1,5 +1,5 @@
 
-<%= form_for@pin, html: { multipart: true } do |f| %>
+<%= form_for @pin, html: { multipart: true } do |f| %>
   <% if @pin.errors.any? %>
 <div class="panel panel-default"><br/>
   <div id="error_explanation" class="panel-heading" >
