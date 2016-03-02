@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   root 'pins#index' 
-  get 'home/about', to: 'home#about'
+  get 'home/about' => 'home#about'
 
   resources :pins
   devise_for :users

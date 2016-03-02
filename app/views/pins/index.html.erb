@@ -1,12 +1,12 @@
 
 
-<p id="notice"><%= notice %></p>
-
+<!--<p id="notice"><#%= notice %></p>-->
+<%= render 'home/jumbotron' unless user_signed_in? %>
 <div class="center">
     <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
 </div>
 <br/>
-  <div id="pins">
+  <div id="pins" class="transitions-enabled">
   
       <% @pins.each do |pin| %>
      
