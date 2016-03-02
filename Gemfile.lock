@@ -40,12 +40,12 @@ GEM
     autoprefixer-rails (6.3.1)
       execjs
       json
-    aws-sdk (2.2.20)
-      aws-sdk-resources (= 2.2.20)
-    aws-sdk-core (2.2.20)
+    aws-sdk (2.2.22)
+      aws-sdk-resources (= 2.2.22)
+    aws-sdk-core (2.2.22)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.2.20)
-      aws-sdk-core (= 2.2.20)
+    aws-sdk-resources (2.2.22)
+      aws-sdk-core (= 2.2.22)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -184,7 +184,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (~> 2.2, >= 2.2.20)
+  aws-sdk (~> 2.2, >= 2.2.22)
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
