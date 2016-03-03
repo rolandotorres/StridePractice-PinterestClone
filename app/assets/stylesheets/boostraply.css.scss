@@ -1,4 +1,4 @@
-
+$navbar-height: 60px;
 $navbar-default-bg:#AA89A1;
 $white:#fff;
 $navbar-default-link-color:$white;
@@ -10,12 +10,15 @@ $pagination-disabled-color:#FF8C00;
 $pagination-color:#FF8C00;
 $pagination-border:#AA89A1;
 $pagination-disabled-border:#AA89A1;
+$link-hover-color:#00b3b3;
+$pagination-hover-bg:#e6ffff;
+$pagination-hover-border:#00cccc;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 body {
-  margin-top: 60px;
+  margin-top: 90px;
 }
 
 
