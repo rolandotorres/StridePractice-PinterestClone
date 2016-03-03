@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar  navbar-fixed-top navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -10,7 +10,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Pin-tastic!", root_path, class: 'navbar-brand', id: 'logo' %>
+      
+      <%= link_to "Pin-tastic", root_path, class: 'navbar-brand', id: 'logo' %>
+      <div id="logoimg"></div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,7 +27,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'About Me', home_about_path %></li>
+        <li><%= link_to 'About', home_about_path %></li>
         <% if user_signed_in? %>
         <% javascript_include_tag :defaults %>
           <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
