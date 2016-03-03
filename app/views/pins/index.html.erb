@@ -5,7 +5,6 @@
 <div class="center">
     <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
 </div>
-<br/>
   <div id="pins" class="transitions-enabled">
   
       <% @pins.each do |pin| %>
@@ -19,13 +18,14 @@
         <strong>Description: </strong><%= pin.description %><br/>
         <strong>Pinned by: </strong><%= pin.user.name if pin.user %>
      
-        
+        <div id="listpinfooter" class="panel-footer">
         <% if pin.user == current_user %>
-        <div class="panel-footer">
+        
         <%= link_to 'Edit', edit_pin_path(pin),class: 'btn btn-warning btn-xs' %>&nbsp;
         <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %>
-        </div>
+        
         <% end %>
+        </div>
          </div>
        </div>
       </div>
