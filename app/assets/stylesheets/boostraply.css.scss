@@ -13,6 +13,9 @@ $pagination-disabled-border:#AA89A1;
 $link-hover-color:#00b3b3;
 $pagination-hover-bg:#e6ffff;
 $pagination-hover-border:#00cccc;
+$panel-default-heading-bg:#d9ffcc;
+$panel-footer-bg:#eaeaea;
+$panel-default-border:#d4d4aa;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -63,7 +66,7 @@ body {
    height: 35px;
    width: 25px;
    position: relative;
-   top: 4px;
+   top: 7px;
 }
 .btn {
   color: #fff;
@@ -77,9 +80,7 @@ body {
     background-color: #000;
   }*/
 }
-.panel {
-   background-color:#ccffff;
-}
+
 .panel {
   &-heading {
     margin: 0;
@@ -104,8 +105,12 @@ body {
     width: 100%;
     height: 45px;
 }
+#login {
+  margin-right: 40px;
+}
 
 #copyright {
+    margin-top: 20px;
 		padding-top: 2px;
 		color: white;
 		background-color: #3D3C3A;
