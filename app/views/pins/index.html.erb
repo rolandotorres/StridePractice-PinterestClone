@@ -16,8 +16,11 @@
         </div>
       <div class="panel-body">
         <strong>Description: </strong><%= pin.description %><br/>
-        <strong>Pinned by: </strong><%= pin.user.name if pin.user %>
-     
+        <% if pin.user == current_user %>
+            <strong>Pinned by: </strong><em>YOU</em>
+        <% else %>
+            <strong>Pinned by: </strong><%= pin.user.name if pin.user %>
+        <% end %>
         <div id="listpinfooter" class="panel-footer">
         <% if pin.user == current_user %>
         

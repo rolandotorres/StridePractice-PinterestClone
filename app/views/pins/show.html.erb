@@ -5,7 +5,11 @@
    </div>
    <div class="panel-body center">
     <strong>Description: </strong><%= @pin.description %><br/>
-    <strong>Pinned by: </strong><%= @pin.user.name if @pin.user %>
+     <% if @pin.user == current_user %>
+            <strong>Pinned by: </strong><em>YOU</em>
+        <% else %>
+            <strong>Pinned by: </strong><%= @pin.user.name if @pin.user %>
+        <% end %>
     <% if @pin.user == current_user %>
     <div class="panel-footer">
         <%= link_to 'Edit', edit_pin_path(@pin),class: 'btn btn-warning btn-md' %>&nbsp;

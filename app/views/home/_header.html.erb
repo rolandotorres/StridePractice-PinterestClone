@@ -31,10 +31,10 @@
         <% if user_signed_in? %>
         <% javascript_include_tag :defaults %>
           <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-          <li><%= link_to 'Log out', destroy_user_session_path, :method => :delete %></li>
+          <li><%= link_to 'Log out', destroy_user_session_path, :method => :delete, class: "addspaceright"%></li>
         <% else %>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li id="login"><%= link_to 'Log in', new_user_session_path %></li>
+          <li><%= link_to 'Log in', new_user_session_path, class: "addspaceright" %></li>
         <% end %>
         <!--li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
