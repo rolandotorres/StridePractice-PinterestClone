@@ -81,8 +81,12 @@ body {
     background-color: #000;
   }*/
 }
-
+.panel-default {
+  padding: 0;
+  margin: 0;
+}
 .panel {
+
   &-heading {
     margin: 0;
     padding: 10px;
