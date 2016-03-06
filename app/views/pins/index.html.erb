@@ -17,10 +17,11 @@
       <div class="panel-body">
         <strong>Description: </strong><%= pin.description %><br/>
         <% if pin.user == current_user %>
-            <strong>Pinned by: </strong><em>YOU</em>
+            <strong>Pinned by: </strong><em>YOU</em><br/>
         <% else %>
-            <strong>Pinned by: </strong><%= pin.user.name if pin.user %>
+            <strong>Pinned by: </strong><%= pin.user.name if pin.user %><br/>
         <% end %>
+        <strong>Uploaded: </strong><em><%= time_ago_in_words(pin.created_at) %> ago</em>
         <div id="listpinfooter" class="panel-footer">
         <% if pin.user == current_user %>
         

@@ -6,11 +6,12 @@
    <div class="panel-body center">
     <strong>Description: </strong><%= @pin.description %><br/>
      <% if @pin.user == current_user %>
-            <strong>Pinned by: </strong><em>YOU</em>
-        <% else %>
-            <strong>Pinned by: </strong><%= @pin.user.name if @pin.user %>
-        <% end %>
-    <% if @pin.user == current_user %>
+        <strong>Pinned by: </strong><em>YOU</em><br/>
+     <% else %>
+        <strong>Pinned by: </strong><%= @pin.user.name if @pin.user %><br/>
+     <% end %>
+      <strong>Uploaded: </strong><em><%= time_ago_in_words(@pin.created_at) %> ago</em>
+     <% if @pin.user == current_user %>
     <div class="panel-footer">
         <%= link_to 'Edit', edit_pin_path(@pin),class: 'btn btn-warning btn-md' %>&nbsp;
         <%= link_to 'Destroy', @pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-md' %>
